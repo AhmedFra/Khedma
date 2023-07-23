@@ -32,7 +32,7 @@ class _RemindersState extends State<Reminders> {
           Column(
             children: [
               CustomAppBar(title: "",),
-              SizedBox(height: 10,),
+              
               _addCalender(),
               _addMycalender(),
               
@@ -142,23 +142,15 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
-      height: 110,
+    
       width: double.infinity,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF73AEF5),
-            Color(0xFF61A4F1),
-            Color(0xFF478FE0),
-            Color(0xFF398AE5),
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
+        color: Colors.white,
+        boxShadow: [BoxShadow(color: Colors.grey, spreadRadius: 0, blurRadius: 0)],
       ),
       child: Column(
         children: [
@@ -172,7 +164,8 @@ class CustomAppBar extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.arrow_back,
-                  color: Colors.white,
+                  color: Colors.black,
+                  size: 30,
                 ),
               ),
               Row(
@@ -182,7 +175,7 @@ class CustomAppBar extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1,
                       fontSize: 24.0,

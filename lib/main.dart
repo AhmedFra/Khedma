@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'add_task.dart';
+import 'informations.dart';
 
 void main() {
   runApp(const MainApp());
